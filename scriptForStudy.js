@@ -42,15 +42,18 @@ function wholeDayFun(){
         
         rem_sec=time.getSeconds();
         timer_text.textContent=rem_min+ " : "+rem_sec;
-    },100);
-
-    if(min>=25){
-        check25sec();
+        
+    if(rem_min>=50){
+        audio2.play();
+    
+    }
+    else{
+        audio2.pause();
+        audio2.currentTime=0;
     }
     
-
-
-
+    },1000);
+  
 }
 
 
